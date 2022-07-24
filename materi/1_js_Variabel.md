@@ -118,97 +118,160 @@ Apa yang menarik - tanda dolar `$` dan garis bawah `_`  juga dapat digunakan dal
 Contoh penamaan yang benar :
 
 ```js
-let $ = 1;
-let _ = 2;
-alert($ + _);
+let $ = 1;// Mendeklarasikan varibel dengan penamaan variabel "$"
+let _ = 2;// Mendeklarasikan varibel dengan penamaan variabel "_"
+alert($ + _);// 3
 ```
 
+Contoh penamaan yang tidak benar :
 
-
-```javascript
-for (variable of iterable) {
-  // *code block to be executed*
- }
+```js
+let 1a;// tidak dapat diawali dengan angka
+let my-name;// tanda hubung '-' tidak diperbolehkan dalam nama
 ```
 
+### <strong><span style="color:blue;">#</span></strong> Masalah Kasus
 
+Penamaan variabel `apple` dan `APPLE` adalah 2 variabel yang berbeda.
 
-## Javascript – Iterasi
+### <strong><span style="color:blue;">#</span></strong> Huruf non-latin diperbolehkan, tetapi tidak disarankan
 
-Iterasi mudah dimengerti, ini hanya mengulang urutan elemen. Berikut adalah beberapa contoh mudah :
+Dimungkinkan untuk menggunakan bahassa apa pun, termasuk huruf cyrillic atau bahkan hieroglif, seperti ini :
 
-- Iterasi pada sebuah `Sting`.
-- Iterasi pada `Array`.
-
-
-
-## Javascript – Perulangan pada sebuah String
-
-Untuk membuat perulangan pada `string`, dapat menggunakan perulangan `for…of` untuk mengulangi elemen `string` :
-
-Sintaksis :
-
-```javascript
-//Create a String
-const name = "W3Schools";
- 
-
-//List all elements
-let text = ‘’;
- for (const x of name) {
-  text += `${x} <br/>`
- }
-
-document.getElementById(‘demo’).innerHTML = text;
-
-// Output :
- W
- 3
- S
- c
- h
- o
- o
- l
- s
-
-
+```js
+let имя = '...';
+let 我 = '...';
 ```
 
+Secara teknis, tidak ada kesalahan di sini. Nama seperti itu diperbolehkan, tetapi ada konvensi internasional untuk menggunakan bahasa Inggris dalam nama variabel. Bahlan jika kita menulis naskah kecil, itu mungkin akan berumur panjang. Orang - orang dari negara lain mungkin perlu membacanya beberapa saat.
 
+### <strong><span style="color:red;">#</span></strong> Nama yang dipesan
 
-## Javascript – Perulangan Array
+Ada daftar kata - kata yang dicadangkan, yang tidak dapat digunakan sebagai nama variabel karena digunakan oleh bahasa itu sendiri.
 
-Anda dapat menggunakan perulangan  `for...of` untuk mengulangi elemen `Array` :
+Misalnya : `let`, `class`, `return` dan `function` dicadangkan.
 
-Sintaksis :
+Kode di bawah ini memberikan kesalahan sintaks :
 
-```javascript
-// Create a array
-const letters = ["a", "b", "c"];
-
-// List all elements
-let text = '';
-for (const x of latters){
-    text += `${x} <br/>`
-};
-
-document.getElementById('demo').innerHTML = text;
-
-// Output :
- a
- b
- c
+```js
+let let = 5;// Erorr, tidak dapat menggunakan 'let' sebagai nama variabel
+let return = 5;// Erorr, tidak dapat menggunakan 'return' sebagai nama variabel
 ```
 
+### <strong><span style="color:red;">#</span></strong> Penugasan tanpa penggunaan `use strict`
 
-## Catatan :
+Biasanya, kita perlu mendefinisikan variabel sebelum menggunakannya. Tetapi di masa lalu, secara teknis dimngkinkan untuk membuat variabel hanya dengan menetapkan nilai tanpa menggunakan `let`. Ini masih berfungsi sekarang jika kami tidak menggunakan `use script` untuk menjaga kompatibilitas dengan skrip lama.
 
-`for..of` tidak dapat mengulang `object`.
+```js
+//note: contoh jika tidak menggunakan 'use strict'
+num = 5;// variabel 'num' dibuat jika tidak eksis
+alert(num);//5
+```
+
+Ini adalah contoh tidak bagus dan akan menghasilkan error pada strict mode :
+
+```js
+"use strict"
+
+num = 5;//error: num is not defined
+
+alert(num);
+```
+
+## Konstanta
+
+Untuk mendeklarasikan variabel konstan (tidak berubah), gunakan `const` alih-alih `let` :
+
+```js
+const ultahSaya = '18.04.1982';
+```
+
+Variabel yang dideklarasikan menggunakan `const` yang disebut 'konstanta'. `const` tidak dapat diisi ulang seperti `let` dan `var`. Apabila dilakukan akan mendapatkan error :
+
+```js
+const ultahSaya = '18.04.1982';
+
+ultahSaya = '01.01.2001'; // error, can't reassign the constant!
+```
+
+Ketika seorang programmer yakin bahwa suatu variabel tidak akan pernah berubah, mereka dapat mendeklarasikannya dengan `const` untuk menjamin dan mengkomunikasikan fakta itu dengan jelas kepada kepada semua orang.
+
+Variabel seharusnya di deklarasikan hanya sekali. Perulangan dekalarasi dalam variabel yang sama akan menampilkan sebuah error.
+
+```js
+let pesan = 'this';
+
+//Perulangan 'let' mengarah ke kesalahan
+let pesan = 'That';// SyntaxError: 'message' has already been declared
+```
+
+Jadi, kita seharusnya mendeklarasikan varibel sekali dan kemudian merujuknya dengan `let`.
+
+### huruf besar konstanta
+
+Ada praktik luas untuk menggunakan konstanta sebagai alias untuk nilai yang sulit diingat yang diketahui sebelum dieksekusi.
+
+Konstanta tersebut diberi nama menggunakan huruf besar atau kapital dan garis bawah.
+
+Misalnya, mari kita buat konstanta untuk warna dalam format yang disebut 'web' (heksadesimal) :
+
+```js
+const COLOR_RED = '#F00';
+const COLOR_GREEN = '#0F0';
+const COLOR_BLUE = '#00F';
+const COLOR_ORANGE = '#FF7F00';
+
+//...ketika kita membuatuhkan untuk memilih warna
+let color = COLOR_ORANGE;
+alert(color);// #FF7F00
+```
+
+Keuntungan :
+
+- `COLOR_ORANGE` lebih mudah diingat dibandingkan dengan `#FF7F00`.
+- Akan lebih mudah untuk typo atau mistype `#FF7F00` dibandingkan `COLOR_ORANGE`.
+-  Ketika membaca kode, `COLOR_ORANGE` lebih mempunyai arti atau lebih menggabarkan dibandingkan dengan `#FF7F00`.
+
+
+## Rangkuman :
+
+Kita dapat mendeklarasikan varibale untuk menyimpan data dengan menggunakan kata kunci `var`, `let` atau `const`.
+
+- `let` - adalah deklarasi modern variabel.
+- `var` - adalah deklarasi model lama. Dan normalnya kita tidak akan menggunakanya lagi.
+- `const` - sama seperti `let`, tapi nilai dari variabelnya tidak dapat digantikan(konstanta).
+
+Variabel harus diberi nama dengan cara yang memungkinkan kita untuk dengan mudah memahami apa yang ada di dalamnya.
 
 ## Latihan :
 
-1. Buatlah perulangan `for...of` dengan memanfaatkan iterable :
-   1. Nama anda. (string)
-   2. Biodata anda. (object)
-   3. Resolusi anda. (array)
+1. Bekerja dengan variabel
+
+   - Deklarasikan dua variabel : `admin` dan `nama`.
+   - Masukan nilai `Jhon` ke variabel `nama`.
+   - Menyalin nilai dari `nama` ke `admin`.
+   - Tampilkan nilai dari variabel `admin` menggunakan method build-in `alert` dan harus menampilkan hasil : Jhon.
+
+2. Berikan nama yang tepat
+
+   - Buat variabel dengan nama dari planet kita. Bagaimana anda menuliskan variabelnya ?
+   - Buat variabel untuk memasukan nama dari pengunjug website. Bagaimana anda menuliskan variabelnya ?
+
+3. Tentukan Huruf besar untuk variabel const ?
+
+   ```js
+   const ultah = '18.04.1982';
+   
+   const umur = someCode(ultah);
+   ```
+
+   - Disini kita  mempunyai variabel tanggal `ultah` dan `umur` yang dikalkulasikan dari `ultah` dengan bantuan dari method `someCode()`.
+   - Yang manakan yang benar untuk menggunakan huruf besar. Apakah variabel `ultah`? `umur`? atau keduanya ?
+
+   ```js
+   const BIRTHDAY = '18.04.1982'; // make uppercase?
+   
+   const AGE = someCode(BIRTHDAY); // make uppercase?
+   ```
+
+   
