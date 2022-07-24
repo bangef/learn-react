@@ -268,10 +268,12 @@ Variabel harus diberi nama dengan cara yang memungkinkan kita untuk dengan mudah
    - Disini kita  mempunyai variabel tanggal `ultah` dan `umur` yang dikalkulasikan dari `ultah` dengan bantuan dari method `someCode()`.
    - Yang manakan yang benar untuk menggunakan huruf besar. Apakah variabel `ultah`? `umur`? atau keduanya ?
 
+   
+   
    ```js
    const BIRTHDAY = '18.04.1982'; // make uppercase?
    
    const AGE = someCode(BIRTHDAY); // make uppercase?
    ```
-
+   
    
