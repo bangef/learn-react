@@ -30,9 +30,9 @@ Tipe `number` merepresentasikan dari `integer` dan `floating point number`.
 
 Terdapat banyak `operator` untuk tipe data `number`, misalnya perkalian `*`, pembagian `/`, penambahan `+`, pengurangan `-`, dan lainnya.
 
- Selain bilangan biasa, ada yang disebut `nilai numerik khusus` yang juga termasuk dalam tipe data ini : `infinity`, `-infinity` dan `NaN`.
+Selain bilangan biasa, ada yang disebut `nilai numerik khusus` yang juga termasuk dalam tipe data ini : `infinity`, `-infinity` dan `NaN`.
 
-- `Infinity` mewakili `infinity` matematis. Ini adalah nilai khusus yang lebih besar dari angka apapun. Kita bisa mendapatkanya sebaga hasil dari pembagian dengan nol :
+- `Infinity` mewakili `infinity` matematis. Ini adalah nilai khusus yang lebih besar dari angka apapun. Kita bisa mendapatkanya sebagai hasil dari pembagian dengan nol :
 
 ```js
 alert(1/0);//Infinity
@@ -62,7 +62,7 @@ Jadi, jika ada `NaN` di suatu tempat dalam ekspresi matematika, itu menyebar ke 
 
 ## BigInt
 
-Didalam Javascript, tipe `number` tidak dapat dengan aman mewakili nilai bilangan bilat yang lebih besar dari 2<sup>53</sup>-1(yaitu : 900719254740991), atau kurang dari -(2<sup>53</sup>-1) untuk negatif.
+Didalam Javascript, tipe `number` tidak dapat dengan aman mewakili nilai bilangan bulat yang lebih besar dari 2<sup>53</sup>-1(yaitu : 900719254740991), atau kurang dari -(2<sup>53</sup>-1) untuk negatif.
 
 Lebih tepatnya tipe `number` dapat menyimpan bilangan bulat yang lebih besar (hingga 1.7976931348623157 * 10<sup>10308</sup>), tetapi di luar kisaran bilangan bulat aman -+(2<sup>53</sup>-1) akan ada kesalahan presisi, karena tidak semua digit masuk ke dalam penyimpanan 64-bit tetap. Jadi nilai `perkiraan` dapat disimpan.
 
