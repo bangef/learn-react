@@ -1,0 +1,37 @@
+/* Small Screen */
+.movie {
+	margin-bottom: 0.5rem;
+}
+.movie:last-child {
+	margin-bottom: 0;
+}
+.movie__image {
+	border-radius: 1rem;
+	max-width: 100%;
+	margin-bottom: 1rem;
+}
+.movie__title {
+	color: #f72585;
+	margin-bottom: 0.2rem;
+}
+.movie__date {
+	margin-bottom: 1rem;
+}
+
+/* Medium Screen */
+@media (min-width: 768px) {
+	.movie {
+		flex-basis: 50%;
+	}
+	.movie:last-child {
+		margin-bottom: 0.5rem;
+	}
+}
+
+/* Large Screen */
+@media (min-width: 1024px) {
+	.movie {
+		flex-basis: 25%;
+		padding: 1rem;
+	}
+}
