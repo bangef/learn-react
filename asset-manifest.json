@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/learn-react/static/css/main.996ca250.css",
+    "main.js": "/learn-react/static/js/main.590eb606.js",
+    "static/media/img_hero_1.png": "/learn-react/static/media/img_hero_1.f80ef9004249ff2c3862.png",
+    "static/media/img_formcovid_1.png": "/learn-react/static/media/img_formcovid_1.d75aaaf7d06cef99ca07.png",
+    "index.html": "/learn-react/index.html",
+    "main.996ca250.css.map": "/learn-react/static/css/main.996ca250.css.map",
+    "main.590eb606.js.map": "/learn-react/static/js/main.590eb606.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.996ca250.css",
+    "static/js/main.590eb606.js"
+  ]
+}
