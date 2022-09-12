@@ -1,6 +1,15 @@
 import Home from "./pages/Home";
+
 function App() {
-	return <Home />;
+  return (
+    <div>
+      {/*
+       * Render Halaman Home
+       * Jika ingin diubah, maka ubah di Halaman Home.
+       */}
+      <Home />
+    </div>
+  );
 }
 
 export default App;

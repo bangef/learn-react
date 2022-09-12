@@ -2,22 +2,23 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
 	return (
-		<div className={styles.container}>
-			<nav className={styles.navbar}>
-				<div>
-					<h1 className={styles.navbar__brand}>Movie App</h1>
-				</div>
-				<div>
-					<ul className={styles.navbar__list}>
-						<li className={styles.navbar__item}>Home</li>
-						<li className={styles.navbar__item}>Add Movie</li>
-						<li className={styles.navbar__item}>Popular</li>
-						<li className={styles.navbar__item}>Now Playing</li>
-						<li className={styles.navbar__item}>Top Rated</li>
-					</ul>
+		<>
+			<nav>
+				<div className={styles.container}>
+					<div className={styles.nav__left}>
+						<h2 className={styles.nav__left__logo}>Covid ID</h2>
+					</div>
+					<div className={styles.nav__right}>
+						<ul className={styles.nav__right__list}>
+							<li className={styles.nav__right__items}>Global</li>
+							<li className={styles.nav__right__items}>Indonesia</li>
+							<li className={styles.nav__right__items}>Provinsi</li>
+							<li className={styles.nav__right__items}>About</li>
+						</ul>
+					</div>
 				</div>
 			</nav>
-		</div>
+		</>
 	);
 };
 

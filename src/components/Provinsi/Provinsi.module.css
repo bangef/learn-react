@@ -1,0 +1,67 @@
+.provinsi {
+	padding: 1rem;
+}
+
+.provinsi__container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.provinsi__title {
+	text-align: center;
+	font-size: 2.441rem;
+	color: #06d6a0;
+	font-weight: 700;
+}
+
+.provinsi__description {
+	text-align: center;
+	color: #118ab2;
+	font-weight: 400;
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+.provinsi__wrapper__table {
+	overflow: auto;
+}
+
+.provinsi__table,
+tr,
+td,
+th {
+	border-collapse: collapse;
+	border: 1px solid #64748b;
+}
+.provinsi__table th {
+	color: #06d6a0;
+}
+.provinsi__table td {
+	color: #64748b;
+	text-align: center;
+}
+.provinsi__table th,
+.provinsi__table td {
+	padding: 0.5rem;
+}
+@media (min-width: 768px) {
+	.provinsi {
+		padding: 5rem 3rem;
+	}
+	.provinsi__wrapper__table {
+		overflow: auto;
+	}
+
+	.provinsi__table th,
+	.provinsi__table td {
+		padding: 0.8rem 2rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.provinsi__wrapper__table {
+		display: flex;
+		justify-content: center;
+	}
+}

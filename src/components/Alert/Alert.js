@@ -1,7 +1,9 @@
 function Alert(props) {
 	return (
 		<>
-			<p style={{ color: "red", fontSize: "0.8rem" }}>{props.children}</p>
+			<span style={{ color: "red", fontSize: ".8rem", display: "block" }}>
+				{props.children}
+			</span>
 		</>
 	);
 }
